@@ -7,6 +7,7 @@ start: 100
 end: 0
 update: --
 */
+console.log('\n============Task-1============\n');
 
 for(let i = 100; i >= 0; i--) {
     console.log(i);
@@ -18,6 +19,7 @@ start: 0
 end: 50
 update: +2
 */
+console.log('\n============Task-2============\n');
 
 for(let i = 0; i <= 50; i += 2) {
     console.log(i);
@@ -32,6 +34,8 @@ for(let i = 0; i <= 25; i++) {
 }
 
 // Output all the numbers divisible by 5 from 0 to 50 (both inclusive) -> 0 5 10 …. 50
+console.log('\n============Task-3============\n');
+
 for(let i = 0; i <= 50; i += 5) {
     console.log(i);
 }
@@ -45,6 +49,8 @@ for(let i = 0; i <= 10; i++) {
 }
 
 // Find sum of the numbers from 1 to 5 (both inclusive) -> 15
+console.log('\n============Task-4============\n');
+
 
 let sum = 0;
 
@@ -56,6 +62,8 @@ console.log(sum); // 15
 
 
 // Find sum of the numbers from 10 to 15 (both inclusive) -> 75
+console.log('\n============Task-5============\n');
+
 sum = 0;
 
 for(let i = 10; i <= 15; i++) {
@@ -66,6 +74,7 @@ console.log(sum); // 75
 
 
 // Output each character from TechGlobal School -> T e c h G l o b a l   S c h o o l
+console.log('\n============Task-6============\n');
 
 let school = 'TECHGLOBAL School'; 
 
@@ -74,6 +83,8 @@ for(let i = 0; i <= school.length - 1; i++) { // or i < school.length
 }
 
 // Count the total occurrences of letter o in TechGlobal School  -> 3
+console.log('\n============Task-7============\n');
+
 
 let countO = 0;
 
@@ -84,6 +95,8 @@ for(let i = 0; i <= school.length - 1; i++) { // 'o'
 console.log(countO); // 3
 
 // Output all the odd numbers from 1 to Random Number (both inclusive) -> 1 3 5 7 9 …. random
+console.log('\n============Task-8============\n');
+
 
 let randomNumber = generateRandomNumber(10, 20);
 
@@ -102,6 +115,13 @@ r1 r2
 4, 8    -> 4 5 6 7 8
 5, 5    -> 5
 */
+console.log('\n============Task-9============\n');
 
 let r1 = generateRandomNumber(1, 10);
 let r2 = generateRandomNumber(1, 10);
+let difference = Math.max(r1,r2) - Math.min(r1, r2);
+console.log(`The random numbers are ${r1} and ${r2}`);
+
+for (let i = 0; i <= difference; i++) {
+    console.log(Math.min(r1,r2) + i);
+}
