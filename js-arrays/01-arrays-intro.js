@@ -83,9 +83,9 @@ However, isArray() static method returns true if the given variable is actually 
 let smth1 = [];
 let smth2 = {};
 
-console.log(typeof smth1);
-console.log(typeof smth2);
-console.log(typeof null);
+console.log(typeof smth1); // object
+console.log(typeof smth2); // object
+console.log(typeof null); // object
 
 console.log(Array.isArray(smth1)); // true
 

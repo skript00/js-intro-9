@@ -63,9 +63,98 @@ for (attempts = 1; ; attempts++) {
     if (t7r1 % 5 === 0) {
         break;
     }
-    console.log(`The random number ${t7r1} isn't divisible by five. This is attempt ${attempts}`);
 }
 console.log(`The random number is ${t7r1} and it took ${attempts} attempt/s to generate it`);
 
 // Task-8
 console.log('\n============Task-8============\n');
+
+const countries = ['Germany', 'Argentina', 'Ukraine', 'Romania'];
+console.log(countries);
+console.log(countries.sort()); // .sort() manipulates the array. countries will be sorted in every log moving forward
+
+// Task-9
+console.log('\n============Task-9============\n');
+
+const dogs = ['Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky'];
+console.log(dogs);
+console.log(dogs.includes('Pluto'));
+
+// Task-10
+console.log('\n============Task-10============\n');
+
+const cats = ['Garfield', 'Tom', 'Sylvester', 'Azrael'];
+
+console.log(cats.sort());
+console.log(cats.includes('Garfield' && 'Felix'));
+
+// Task-11
+console.log('\n============Task-11============\n');
+
+const numbers = [10.5, 20.75, 80, 15.75];
+console.log(numbers);
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+
+// Task-12 
+console.log('\n============Task-12============\n');
+
+const objects = ['Pen', 'notebook', 'Book', 'paper', 'bag', 'pencil', 'ruler'];
+let countBorP = 0;
+let countBookOrPen = 0;
+
+for (let i = 0; i < objects.length; i++) {
+    if (objects[i][0].toLowerCase().includes('b') || objects[i][0].toLowerCase().includes('p')) {
+        countBorP++;
+    }
+}
+
+for (let i = 0; i < objects.length; i++) {
+    if (objects[i].toLowerCase().includes('book') || objects[i].toLowerCase().includes('pen')) {
+        countBookOrPen++;
+    }
+}
+
+console.log(`Elements starting with 'B' or 'P' = ${countBorP}`);
+console.log(`Elements having 'book' or 'pen' = ${countBookOrPen}`); 
+
+// Task-13 
+console.log('\n============Task-13============\n');
+
+const numbers2 = [3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78];
+console.log(numbers2);
+let moreThan10 = 0;
+let lessThan10 = 0;
+let equalTo10 = 0;
+for (let i = 0; i < numbers2.length; i++) {
+    if (numbers2[i] > 10) {
+    moreThan10++;
+    }
+    else if (numbers2[i] < 10) {
+        lessThan10++;
+    }
+    else {
+        equalTo10++;
+    }
+}
+console.log(`Elements that are more than 10 = ${moreThan10}`);
+console.log(`Elements that are less than 10 = ${lessThan10}`);
+console.log(`Elements that are 10 = ${equalTo10}`);
+
+// Task-14
+console.log('\n============Task-14============\n');
+
+const firstArr = [5, 8, 13, 1, 2];
+const secondArr = [9, 3, 67, 1, 0];
+
+console.log(firstArr);
+console.log(secondArr);
+
+// Task-15
+console.log('\n============Task-15============\n');
+
+function firstDuplicate(arr) {
+    return 'fooBar';
+}

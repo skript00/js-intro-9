@@ -16,7 +16,7 @@ console.log(animals); // [ 'Cat', 'Rabbit', 'Cat', 'Lion', 'Monkey', 'Bird' ]
 
 const numbers = [ 0, 5, -1, -3, 10, 15 ];
 
-numbers.splice(-1, 3, 100, 101, 102); 
+numbers.splice(-1, 3, 100, 101, 102);
 
-console.log(numbers.length)
-console.log(numbers);
+console.log(numbers.length) // 8
+console.log(numbers); // [0,   5,  -1,  -3, 10, 100, 101, 102]

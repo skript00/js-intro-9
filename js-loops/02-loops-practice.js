@@ -125,3 +125,24 @@ console.log(`The random numbers are ${r1} and ${r2}`);
 for (let i = 0; i <= difference; i++) {
     console.log(Math.min(r1,r2) + i);
 }
+
+console.log('\n============Task-10============\n');
+
+/*
+Generate a random number bt 1 to 10 (both inclusive
+Find the product of all the numbers starting from 1 to randomly generated random
+
+5       -> 1 * 2 * 3 * 4 * 5 -> 120
+6       -> 1 * 2 * 3 * 4 * 5 * 6 -> 720
+3       -> 1 * 2 * 3 -> 6
+*/
+
+let ran = generateRandomNumber(1,10);
+let product = 1;
+console.log(`Random number is =`, ran);
+for (let i = 1; i <= ran; i++) { // result = 1, i = 1
+    product *= i;
+}
+
+console.log(`The product is = `, product);
+

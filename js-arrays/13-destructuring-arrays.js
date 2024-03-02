@@ -24,4 +24,4 @@ const numbers = [ -3, 10, 0, 100, 200 ];
 
 const [ , ten, zero, , two_hundred] = numbers;
 
-console.log(two_hundred);
+console.log(two_hundred); // 200

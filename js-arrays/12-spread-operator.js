@@ -21,4 +21,4 @@ const studentsBatch9Group2 = [ 'James', 'Ameer', 'Niko' ];
 
 const allStudents = [...studentsBatch9Group1, ...studentsBatch9Group2];
 
-console.log(allStudents);
+console.log(allStudents); // [ 'Alex', 'Max', 'Rabe', 'James', 'Ameer', 'Niko' ]
