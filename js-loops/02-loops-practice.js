@@ -88,7 +88,7 @@ console.log('\n============Task-7============\n');
 
 let countO = 0;
 
-for(let i = 0; i <= school.length - 1; i++) { // 'o'
+for(let i = 0; i < school.length; i++) { // 'o'
     if(school[i].toLowerCase() === 'o') countO++;
 }
 
@@ -96,7 +96,6 @@ console.log(countO); // 3
 
 // Output all the odd numbers from 1 to Random Number (both inclusive) -> 1 3 5 7 9 …. random
 console.log('\n============Task-8============\n');
-
 
 let randomNumber = generateRandomNumber(10, 20);
 
@@ -119,12 +118,18 @@ console.log('\n============Task-9============\n');
 
 let r1 = generateRandomNumber(1, 10);
 let r2 = generateRandomNumber(1, 10);
+
 let difference = Math.max(r1,r2) - Math.min(r1, r2);
 console.log(`The random numbers are ${r1} and ${r2}`);
 
 for (let i = 0; i <= difference; i++) {
     console.log(Math.min(r1,r2) + i);
 }
+/* OR - no new variable needed
+for(let i = Math.min(r1, r2); i <= Math.max(r1, r2); i++) {
+    console.log(i);
+}
+*/
 
 console.log('\n============Task-10============\n');
 
@@ -140,7 +145,7 @@ Find the product of all the numbers starting from 1 to randomly generated random
 let ran = generateRandomNumber(1,10);
 let product = 1;
 console.log(`Random number is =`, ran);
-for (let i = 1; i <= ran; i++) { // result = 1, i = 1
+for (let i = 1; i <= ran; i++) { // product = 1, i = 1
     product *= i;
 }
 

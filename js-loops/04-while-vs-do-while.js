@@ -16,7 +16,6 @@ do {
 
 
 
-
 const gameNumber = 4;
 let guessedNumber;
 let counter = 0;

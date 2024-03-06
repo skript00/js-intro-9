@@ -21,11 +21,11 @@ console.log(attempt); // 86400
 
 
 
-for(let i = 1; i <= 3; i++) {
-    console.log(i); // 1
+for(let i = 1; i <= 3; i++) { // i = 3
+    console.log(i); // 3
     console.log('Inner loop'); // Inner loop
-    for(let j = 1; j <= 5; j++) { // j = 1
-        console.log('\t', j); // 1
+    for(let j = 1; j <= 5; j++) { // j = 5
+        console.log('\t', j); // 5
     }
 }
 

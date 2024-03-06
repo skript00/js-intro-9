@@ -15,12 +15,13 @@ console.log(sumEvenIndexes);
 // Find the multiplication of numbers that has odd index -> 4 * 3 * 2 -> 24
 console.log('\n============Product of elements that have Odd Indexes============\n');
 
-let product = 1;
+let productOfOddIndexes = 1;
 
-for (let i = 0; i < numbers.length; i++) {
-    if (i % 2 !== 0) product *= numbers[i]
+for(let i = 0; i < numbers.length; i++) { 
+    if(i % 2 !== 0) productOfOddIndexes *= numbers[i];
 }
-console.log(product);
+
+console.log(productOfOddIndexes);
 
 
 
@@ -50,6 +51,7 @@ for (let i = 0; i < firstArr.length; i++) {
 console.log(firstArr);
 console.log(secondArr);
 console.log(thirdArr)
+
 
 
 //
@@ -89,20 +91,28 @@ console.log(aAllSorted);
 const nums = [-1, 1, 3, 0, 2, 6, 8];
 // Please find the first even number from the array -> 0
 
-for (let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 0) {
-        console.log(nums[i]);
+let firstEven;
+
+for(const number of nums) {
+    if(number % 2 === 0) {
+        firstEven = number;
         break;
     }
 }
 
+console.log(firstEven);
+
+
+
 // Please find the biggest odd number from the array -> 3
 let biggestOdd; // 3
+
 for(const number of nums) { // 0
     if(number % 2 !== 0 && (biggestOdd === undefined || number > biggestOdd)) {
         biggestOdd = number;
     }
 }
+
 console.log(biggestOdd); // 3
 
 

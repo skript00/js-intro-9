@@ -187,7 +187,3 @@ console.log(swap4('Apple'));
 console.log('\n============Task-10============\n');
 
 */
-
-
-
-
