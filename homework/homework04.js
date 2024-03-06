@@ -148,13 +148,57 @@ console.log('\n============Task-14============\n');
 
 const firstArr = [5, 8, 13, 1, 2];
 const secondArr = [9, 3, 67, 1, 0];
+const thirdArr = []
+
+for (let i = 0; i < firstArr.length; i++) {
+    if (firstArr[i] >= secondArr[i]) {
+        thirdArr.push(firstArr[i]);
+    }
+    else {
+        thirdArr.push(secondArr[i]);
+
+    }
+}
 
 console.log(firstArr);
 console.log(secondArr);
+console.log(thirdArr)
 
 // Task-15
 console.log('\n============Task-15============\n');
 
 function firstDuplicate(arr) {
-    return 'fooBar';
+    for (let i = 0; i < arr.length; i++) {
+        // let duplicate = 0;
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] === arr[i]) {
+                // duplicate++;
+                return arr[j];
+            }
+            // if (duplicate === 2) {
+                
+            // }
+        }
+    }
+return -1
 }
+
+console.log(firstDuplicate([3, 7, 10, 0, 3, 10]));
+console.log(firstDuplicate([5, 7, 7, 0, 5, 10]));
+console.log(firstDuplicate([5, '5', 3, 7, 4]));
+console.log(firstDuplicate([123, 'abc', '123', 3, 'abc']));
+console.log(firstDuplicate([1, 2, 3]));
+console.log(firstDuplicate(['foo', 'abc', '123', 'bar']));
+
+// Task-16 
+console.log('\n============Task-16============\n');
+
+function getDuplicates(arr) {
+    let duplicate = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j] )  
+        }
+    }
+}
+
