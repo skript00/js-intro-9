@@ -85,7 +85,7 @@ while(true) {
         break;
         
     } else 
- //   console.log(`This is attempt ${attempts}, the number ${t7r1} isn't divisible by 5`);
+   console.log(`This is attempt ${attempts}, the number ${t7r1} isn't divisible by 5`);
     attempts++;
 }
 console.log(`The random number is ${t7r1} and it took ${attempts} attempt/s to generate it`);
