@@ -87,6 +87,13 @@ function min(arr) {
     if (arr.length === 0) throw Error('This array is empty!');
 
     return arr.reduce((min, number) => {
-        if 
-    }); // NOT DONE 
+        if  (number < min) return number;
+        return min;
+    });
 }
+
+console.log(min([0, 3, -9,  5, 8]));
+console.log([-2, 0, -7, 10, -5]);
+console.log(min([1, 2, 3, -2]));
+console.log(min([-5, -2]));
+

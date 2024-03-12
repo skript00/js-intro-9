@@ -34,11 +34,18 @@ function multiply (num1) {
 
 const multiplyBy2 = multiply(2);
 const multiplyBy3 = multiply(3);
+const multiplyBy4 = multiply(4);
+const multiplyBy5 = multiply(5);
+const multiplyBy6 = multiply(6);
 
-const result = smth(5); // FIX from GH
+console.log(multiplyBy4(5)); // 20
+console.log(multiplyBy6(3)); // 18
 
-//console.log(smth);
-console.log(result);
+console.log(multiply(10));
+
+
+
+console.log('\n============Task-X============');
 
 function doMath(operator) {
     if(operator === '+') {
@@ -74,6 +81,8 @@ const divide = doMath('/');
 
 console.log(power(3, 2)); // 9
 
+
+console.log('\n============Task-X============');
 
 function a() {
     return function() {
