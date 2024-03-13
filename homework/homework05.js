@@ -232,7 +232,7 @@ isPrime(-5)		-> false
 isPrime(0)		-> false
 isPrime(1)		-> false
 */
-console.log('\n============Task-X============');
+console.log('\n============Task-10============');
 
 function isPrime(num) {
     for (let i = 2; i < 7; i++) {
@@ -262,11 +262,27 @@ add([-5, 6, -3, 11], [5, -6, 3, -11]) 		            -> [0, 0, 0, 0]
 */
 console.log('\n============Task-11============');
 
-// const add = function (arr1, arr2)
+function add(arr1, arr2) {
+    const shorterArr = arr1.length < arr2.length ? arr1 : arr2;
+    const longerArr =  arr1.length < arr2.length ? arr2 : arr1;
+    const newArr = [];
+    
+    for (let i = 0; i < longerArr.length; i++) {
+        if (shorterArr[i] !== undefined) {
+            newArr.push(shorterArr[i] + longerArr[i]);
+        }
+        else {
+            newArr.push(longerArr[i]);
+        }
+    }
+    return newArr;
+}
+console.log(add([3, 0, 0, 7, 5, 10], [6, 3, 2]));
+console.log(add([10, 3, 6, 3, 2], [6, 8, 3, 0, 0, 7, 5, 10, 34]));
+console.log(add([-5, 6, -3, 11], [5, -6, 3, -11]));
 
 
 /* Task-12
-console.log('\n============Task-X============');
 Write a function named as removeExtraSpaces() which takes a string word as an argument and returns 
 the string back with all extra spaces removed when invoked.
 
@@ -275,12 +291,22 @@ removeExtraSpaces("      Hello    World     ")      	-> "Hello World"
 removeExtraSpaces("     JavaScript is          fun") 	-> "JavaScript is fun”
 removeExtraSpaces("") 			                        -> "" 
 */
+console.log('\n============Task-12============');
 
-
-
+function removeExtraSpaces(str) {
+    if (str.length === 0) return str;
+    let newStr = str.trim().split(' ') // trimming whitespace and converting string to array
+    // newStr now looks like this ['word', '', '', '', '', 'word', 'word]
+    newStr = newStr.filter(x => x !== ''); 
+    // filter is creating a new array with every element of newStr so long as that element isn't an empty string
+    return newStr.join(' ');
+}
+console.log(removeExtraSpaces("Hello"));
+console.log(removeExtraSpaces("      Hello    World     "));
+console.log(removeExtraSpaces("     JavaScript is          fun"));
+console.log(removeExtraSpaces(""));
 
 /* Task-13
-console.log('\n============Task-X============');
 Write a function named findClosestTo10() which takes an array of numbers as argument and returns 
 the closest element to 10 from the given array.
     NOTE: Assume that length of array is always more than zero.
@@ -291,8 +317,23 @@ findClosestTo10([10, -13, 5, 70, 15, 57]​) 	 -> 5
 findClosestTo10([10, -13, 8, 12, 15, -20]) 	-> 8
 findClosestTo10([0, -1, -2]) 		        -> 0
 */
+console.log('\n============Task-13============');
 
-
+function findClosestTo10(arr) {
+    return arr.reduce((closer, current) => {
+        let currentDiff;
+        let closestDiff;
+        if (null) {
+            return null;
+        }
+        else {
+            return null
+        }
+    });
+}
+console.log(findClosestTo10([10, -13, 5, 70, 15, 57]​));
+console.log(findClosestTo10([10, -13, 8, 12, 15, -20]));
+console.log(findClosestTo10([0, -1, -2]));
 
 
 /* Task-14
@@ -360,7 +401,20 @@ function countPos(arr) {
 }
 --Task1
 
-TaskX--
+Task13--
+function findClosestTo10(arr) {
+    return arr.reduce((closestElement, currentElement) => {
+        // Calculate the differences between current and closest elements and 10
+        const currentDifference = Math.abs(10 - currentElement);
+        const closestDifference = Math.abs(10 - closestElement);
 
---TaskX
+        // Update closest element based on differences
+        if (currentDifference < closestDifference || (currentDifference === closestDifference && currentElement < closestElement)) {
+            return currentElement;
+        } else {
+            return closestElement;
+        }
+    });
+}
+--Task13
 */
