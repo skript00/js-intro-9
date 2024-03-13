@@ -7,7 +7,6 @@ let credentials = `{
 credentials.slice(credentials.indexOf('username'))
 
 
-
 const obj = JSON.parse(credentials);
 
 console.log(typeof credentials); // 'string'
