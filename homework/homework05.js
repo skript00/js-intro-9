@@ -320,24 +320,24 @@ findClosestTo10([0, -1, -2]) 		        -> 0
 console.log('\n============Task-13============');
 
 function findClosestTo10(arr) {
-    return arr.reduce((closer, current) => {
-        let currentDiff;
-        let closestDiff;
-        if (null) {
-            return null;
-        }
-        else {
-            return null
-        }
+    return arr.reduce((num1, num2) => {
+        let closerNum;
+        let num1Difference = Math.abs(num1 - 10);
+        let num2Difference = Math.abs(num2 - 10);
+
+        closerNum = num1Difference === num2Difference && num1 < num2 ? num1 : num2;
+
+        if (num1Difference === num2Difference || num1Difference < num2Difference && num1 !== 10) closerNum = num1;
+        else closerNum = num2;
+        return closerNum;
     });
 }
-console.log(findClosestTo10([10, -13, 5, 70, 15, 57]​));
+console.log(findClosestTo10([10, -13, 5, 70, 15, 57]));
 console.log(findClosestTo10([10, -13, 8, 12, 15, -20]));
 console.log(findClosestTo10([0, -1, -2]));
 
 
 /* Task-14
-console.log('\n============Task-X============');
 Write a function named as isEmailValid() which takes a string email as an argument and returns 
 true if the email is valid or returns false otherwise when invoked.
 
@@ -358,9 +358,26 @@ isEmailValid("johndoe@a.com") 		-> false
 isEmailValid("johndoe@@gmail.com") 	-> false
 isEmailValid("johndoe@gmail.com") 	-> true
 */
+console.log('\n============Task-14============');
 
+let arr1 = []
+let arr2 = []
+let arr3 = []
+function isEmailValid (email) {
+    if (!email.trim()) return false;
+    const indexOfAt = email.indexOf('@');
+    if (indexOfAt === -1) return false;
+    //INCOMPLETE
 
-
+}  
+console.log(isEmailValid(""));
+console.log(isEmailValid("@gmail.com"));
+console.log(isEmailValid("johndoe@yahoo"));
+console.log(isEmailValid("johndoe@.com"));
+console.log(isEmailValid("a@outlook.com"));
+console.log(isEmailValid("johndoe@a.com"));
+console.log(isEmailValid("johndoe@@gmail.com"));
+console.log(isEmailValid("johndoe@gmail.com"));
 
 /* Task-15
 console.log('\n============Task-X============');
@@ -401,20 +418,8 @@ function countPos(arr) {
 }
 --Task1
 
-Task13--
-function findClosestTo10(arr) {
-    return arr.reduce((closestElement, currentElement) => {
-        // Calculate the differences between current and closest elements and 10
-        const currentDifference = Math.abs(10 - currentElement);
-        const closestDifference = Math.abs(10 - closestElement);
+Task--
 
-        // Update closest element based on differences
-        if (currentDifference < closestDifference || (currentDifference === closestDifference && currentElement < closestElement)) {
-            return currentElement;
-        } else {
-            return closestElement;
-        }
-    });
-}
---Task13
+--Task
 */
+

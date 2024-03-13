@@ -1,12 +1,12 @@
 console.log('\n============ Welcome To The Magic 8-Ball! ============');
-/* Magic 8 Ball
+/*
 console.log('\n============ Welcome To The Magic 8-Ball! ============');
 
-let userName = 'Skript';
+let userName = 'Default User';
 
 userName == false ? console.log('Hello!') : console.log(`Hello ${userName}!`);
 
-const userQuestion = 'Will I master JavaScript?';
+const userQuestion = 'Will I win the lottery?';
 
 console.log(`\tYou asked "${userQuestion}"`);
 
@@ -38,7 +38,6 @@ switch (randomNumber) {
 console.log(`Eight 8all says:`);
 
 console.log(`\t\t${eightBall}`);
-
 */
 
 console.log('\n============ Welcome Racer! ============');
