@@ -180,7 +180,7 @@ function countMultipleWords(arr) {
     let counter = 0;
     for (let ele of arr) {
         ele = ele.trim();
-        counter += ele.split(' ').length > 1 ? 1 : 0;
+        if (ele.split(' ').length > 1) counter++;
     }
     return counter;
 }
@@ -191,7 +191,6 @@ console.log(countMultipleWords([ ]));
 
 
 /* Task-9
-console.log('\n============Task-X============');
 Write a function named as count3OrLess() which takes a string word as an argument and returns 
 the count of the words that has 3 characters or less when invoked.
 
@@ -201,12 +200,25 @@ count3OrLess("JavaScript is fun") 		-> 2
 count3OrLess("My name is John Doe") 	-> 3
 count3OrLess("") 			            -> 0
 */
+console.log('\n============Task-9============');
 
-
+function count3OrLess(str) {
+    let counter = 0;
+    if (str.length === 0) return counter;
+    str = str.split(' ');
+    for (const word of str) {
+        if (word.length <= 3) counter++;
+    }
+    return counter;
+}
+console.log(count3OrLess("Hello"));
+console.log(count3OrLess("Hi John"));
+console.log(count3OrLess("JavaScript is fun"));
+console.log(count3OrLess("My name is John Doe"));
+console.log(count3OrLess(""));
 
 
 /* Task-10
-console.log('\n============Task-X============');
 Write a function named as isPrime() which takes a number as an argument and returns 
 true if the number is prime or returns false otherwise when invoked.
     NOTE: Mathematically, Prime number is a number that can be divided only by itself and 1. 
@@ -220,13 +232,26 @@ isPrime(-5)		-> false
 isPrime(0)		-> false
 isPrime(1)		-> false
 */
+console.log('\n============Task-X============');
 
-
-
+function isPrime(num) {
+    for (let i = 2; i < 7; i++) {
+        console.log(num,i);
+        if (num < 2) return false;
+        else if (num == i) return true;
+        else if (num % i === 0) return false;
+    }
+    return true;
+}
+console.log(isPrime(5));
+console.log(isPrime(2));
+console.log(isPrime(29));
+console.log(isPrime(-5));
+console.log(isPrime(0));
+console.log(isPrime(1));
 
 
 /* Task-11
-console.log('\n============Task-X============');
 Write a function named add() which takes two array of numbers as argument and returns 
 a new array with sum of given arrays elements.
     NOTE: Be careful about the array sizes as they could be different.
@@ -235,8 +260,9 @@ add([3, 0, 0, 7, 5, 10], [6, 3, 2]​) 		             -> [9, 3, 2, 7, 5, 10]
 add([10, 3, 6, 3, 2], [6, 8, 3, 0, 0, 7, 5, 10, 34]) 	-> [16, 11, 9,  3, 2, 7, 5, 10, 34]​
 add([-5, 6, -3, 11], [5, -6, 3, -11]) 		            -> [0, 0, 0, 0]
 */
+console.log('\n============Task-11============');
 
-
+// const add = function (arr1, arr2)
 
 
 /* Task-12

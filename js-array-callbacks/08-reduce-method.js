@@ -1,6 +1,7 @@
 const numbers = [ 4, 10, 3, 0, -2, -5, 1 ];
 
 // evens = 4
+console.log('\n============Task-X============');
 
 const evenCounter = numbers.reduce((count, number) => number % 2 === 0 ? count + 1 : count, 0);
 
@@ -8,6 +9,7 @@ console.log(evenCounter); // 4
 
 
 // sum = 11
+console.log('\n============Task-X============');
 
 const sumOfNumbers = numbers.reduce((sum, number) => {
     return sum + number;
@@ -21,6 +23,7 @@ const fruits = ['Apple', 'Orange', 'Kiwi', 'Pineapple', 'Mango', 'Melon'];
 // count how many elements has 'apple' ignoring cases   -> 2
 // count how many elements has 'i' ignoring cases       -> 2
 // count how many elements ends with 'e'                -> 3
+console.log('\n============Task-X============');
 
 const elementsHasApple = fruits.reduce((count, currentFruit) => {
     if(currentFruit.toLowerCase().indexOf('apple') >= 0) return count + 1;
@@ -29,6 +32,8 @@ const elementsHasApple = fruits.reduce((count, currentFruit) => {
 
 console.log(elementsHasApple); // 2
 
+console.log('\n============Task-X============');
+
 const elementsHasI = fruits.reduce((count, currentFruit) => {
     if(currentFruit.toLowerCase().indexOf('i') >= 0) return count + 1;
     return count;
@@ -36,6 +41,7 @@ const elementsHasI = fruits.reduce((count, currentFruit) => {
 
 console.log(elementsHasI); // 2
 
+console.log('\n============Task-X============');
 
 const elementsEndsWithE = fruits.reduce((count, currentFruit) => {
     if(currentFruit.toLowerCase().endsWith('e')) return count + 1;
@@ -57,6 +63,7 @@ max([-2, 0, -7, 10, -5]) 	-> 10
 max([1, 2, 3, -2])          -> 3
 max([-5, -2])               -> -2
 */
+console.log('\n============Task-X============');
 
 function max(arr) {
     if(arr.length === 0) throw Error('This array is empty!!!');
@@ -82,6 +89,7 @@ min([-2, 0, -7, 10, -5]) 	-> -7
 min([1, 2, 3, -2])          -> -2
 min([-5, -2])               -> -5
 */
+console.log('\n============Task-X============');
 
 function min(arr) {
     if (arr.length === 0) throw Error('This array is empty!');
@@ -93,7 +101,7 @@ function min(arr) {
 }
 
 console.log(min([0, 3, -9,  5, 8]));
-console.log([-2, 0, -7, 10, -5]);
+console.log(min([-2, 0, -7, 10, -5]));
 console.log(min([1, 2, 3, -2]));
 console.log(min([-5, -2]));
 

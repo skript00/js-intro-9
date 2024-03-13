@@ -26,6 +26,7 @@ console.log(sentences);
 console.log(newArr);
 
 // each sentence's last word -> ['morning', 'arrays', 'Sunday'];
+console.log('\n============Task-X============');
 
 const lastWords = sentences.map(sentence => sentence.split(' ').at(-1));
 //const lastWords = sentences.map(sentence => sentence.slice(sentence.lastIndexOf(' ') + 1));
@@ -34,6 +35,8 @@ const lastWords = sentences.map(sentence => sentence.split(' ').at(-1));
 
 console.log(lastWords);
 
+
+console.log('\n============Task-X============');
 
 const salaries = [1000.2342, 5234.34533, 721.9786, 3452.50];
 
