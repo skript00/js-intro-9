@@ -233,7 +233,7 @@ isPrime(0)		-> false
 isPrime(1)		-> false
 */
 console.log('\n============Task-10============');
-
+/*
 function isPrime(num) {
     for (let i = 2; i < 7; i++) {
         console.log(num,i);
@@ -243,6 +243,22 @@ function isPrime(num) {
     }
     return true;
 }
+*/
+
+const isPrime = num => {
+    if(num < 2) return false;
+    if(num === 2 || num === 3) return true;
+    if(num % 2 === 0 || num % 3 === 0) return false;
+
+    let i = 5;
+
+    while(i < num) {
+        if(num % i === 0) return false;
+        i += 2;
+    }
+    return true;
+}
+
 console.log(isPrime(5));
 console.log(isPrime(2));
 console.log(isPrime(29));
@@ -360,16 +376,21 @@ isEmailValid("johndoe@gmail.com") 	-> true
 */
 console.log('\n============Task-14============');
 
-let arr1 = []
-let arr2 = []
-let arr3 = []
-function isEmailValid (email) {
-    if (!email.trim()) return false;
-    const indexOfAt = email.indexOf('@');
-    if (indexOfAt === -1) return false;
-    //INCOMPLETE
+const isEmailValid = email => {
+    if(email.includes(' ')) return false;
+    if(email.split('').filter(x => x === '@').length !== 1) return false;
+   // if(email.split('').filter(x => x === '.').length === 0) return false;
 
-}  
+    let beginning = email.split('@')[0]; // splits email into array whilst removing the @ sign
+    let middle = email.split('@')[1]; 
+    let end = email.split('@')[1].split('.')[1]
+
+   // if(!beginning || !middle || !end) return false
+    return (beginning.length >= 2 && middle >=2 && end >= 2)
+
+}
+
+
 console.log(isEmailValid(""));
 console.log(isEmailValid("@gmail.com"));
 console.log(isEmailValid("johndoe@yahoo"));
@@ -380,7 +401,6 @@ console.log(isEmailValid("johndoe@@gmail.com"));
 console.log(isEmailValid("johndoe@gmail.com"));
 
 /* Task-15
-console.log('\n============Task-X============');
 Write a function named as isPasswordValid() which takes a string email as an argument and returns 
 true if the password is valid or returns false otherwise when invoked.
 
@@ -398,8 +418,37 @@ isPasswordValid("Abcd1234$") 		    -> true
 isPasswordValid("Chicago123$") 		    -> true
 isPasswordValid("Test1234#") 		    -> true
 */
+console.log('\n============Task-15============');
 
+const isPasswordValid = (password) => {
+    //checking min/max length of password
+    if(password.length <8 || password.length > 16) return false;
+    //checks if password has at least 1 number
+    if(password.split('').filter(x => x >= '0' && x <= '9').length === 0) return false;
+    //checks if password has at least 1 uppercase
+    if(password.split('').filter(x => x >= 'A' && x <= 'Z').length === 0) return false;
+    //checks if password has at least 1 lowercase
+    if(password.split('').filter(x => x >= 'a' && x <= 'z').length === 0) return false;
 
+    // checks if it has at least 1 special charcter
+    // not a number = x < '0' && x > '9'
+    // not an uppercase letter x < 'A' && 
+    // not a lowercase letter x < 'a' && x > 'z'
+
+    if(password.split('').filter(x => (x < '0' || x > '9') && (x < 'A' || x > 'Z') && (x < 'a' || x > 'z')).length === 0) return false;
+
+    if(password.includes(' ')) return false;
+    
+    return true;
+}
+console.log(isPasswordValid("")); // false
+console.log(isPasswordValid("abcd")); // false
+console.log(isPasswordValid("abcd1234")); // false
+console.log(isPasswordValid("Abcd1234")); // false
+console.log(isPasswordValid("Chicago12345US!#$%")); // false
+console.log(isPasswordValid("Abcd1234$")); // true
+console.log(isPasswordValid("Chicago123$")); // true
+console.log(isPasswordValid("Test1234#")); // true
 
 
 
@@ -422,4 +471,3 @@ Task--
 
 --Task
 */
-
