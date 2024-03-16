@@ -389,8 +389,6 @@ const isEmailValid = email => {
     return (beginning.length >= 2 && middle >=2 && end >= 2)
 
 }
-
-
 console.log(isEmailValid(""));
 console.log(isEmailValid("@gmail.com"));
 console.log(isEmailValid("johndoe@yahoo"));

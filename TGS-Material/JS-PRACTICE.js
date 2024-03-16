@@ -1,12 +1,12 @@
-console.log('\n============ Welcome To The Magic 8-Ball! ============');
-/*
-console.log('\n============ Welcome To The Magic 8-Ball! ============');
+// console.log('\n============ Welcome To The Magic 8-Ball! ============');
 
-let userName = 'Default User';
+// console.log('\n============ Welcome To The Magic 8-Ball! ============');
+/*
+let userName = 'Rabe';
 
 userName == false ? console.log('Hello!') : console.log(`Hello ${userName}!`);
 
-const userQuestion = 'Will I win the lottery?';
+const userQuestion = 'Will I die today?';
 
 console.log(`\tYou asked "${userQuestion}"`);
 
@@ -40,7 +40,7 @@ console.log(`Eight 8all says:`);
 console.log(`\t\t${eightBall}`);
 */
 
-console.log('\n============ Welcome Racer! ============');
+// console.log('\n============ Welcome Racer! ============');
 /*
 console.log('\n============ Welcome Racer! ============');
 
