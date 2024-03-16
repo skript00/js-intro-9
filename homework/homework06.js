@@ -8,7 +8,14 @@ noSpace(" Hello World   ") 	-> "HelloWorld”
 noSpace("Tech Global") 		-> "TechGlobal"
 */
 console.log('\n============Task-1============');
- 
+
+const noSpace = (str) => str.split(' ').join('');
+
+console.log(noSpace(""));
+console.log(noSpace("Javascript"));
+console.log(noSpace("  Hello  "));
+console.log(noSpace(" Hello World   "));
+console.log(noSpace("Tech Global"));
 
 /* Task-2
 console.log('\n============Task-2============');
@@ -23,6 +30,8 @@ replaceFirstLast("Tech Global") 	-> "lech GlobaT"
 replaceFirstLast("A") 		        -> ""
 replaceFirstLast("    A      ") 	-> ""
 */
+
+const replaceFirstLast = (str) =>
 
 /* Task-3
 console.log('\n============Task-3============');
