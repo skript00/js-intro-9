@@ -18,7 +18,6 @@ console.log(noSpace(" Hello World   "));
 console.log(noSpace("Tech Global"));
 
 /* Task-2
-console.log('\n============Task-2============');
 Write a function named replaceFirstLast() which takes a string argument and returns
 a new string with the first and last characters replaced.
     NOTE: If the length is less than 2, return an empty string.
@@ -30,9 +29,19 @@ replaceFirstLast("Tech Global") 	-> "lech GlobaT"
 replaceFirstLast("A") 		        -> ""
 replaceFirstLast("    A      ") 	-> ""
 */
+console.log('\n============Task-2============');
 
-const replaceFirstLast = (str) =>
-
+const replaceFirstLast = (str) => {
+    newStr = str.trim();
+    if(newStr.length < 2) return '';
+    let replaced = newStr.at(-1) + newStr.slice(1,-1) + newStr[0]
+    return replaced;
+}
+console.log(replaceFirstLast(""));
+console.log(replaceFirstLast("Hello"));
+console.log(replaceFirstLast("Tech Global"));
+console.log(replaceFirstLast("A"));
+console.log(replaceFirstLast("    A      "));
 /* Task-3
 console.log('\n============Task-3============');
 Write a function named hasVowel() which takes a string argument and returns
