@@ -28,9 +28,9 @@ countA("Cypress") 			                -> 0
 console.log('\n============Task-2============');
 
 function countA(str) {
-    let counter = 0
+    let counter = 0;
     for(const char of str.toLowerCase()) {
-        counter += char === 'a' ? 1 : 0
+        counter += char === 'a' ? 1 : 0;
     }
     return counter;
 }
