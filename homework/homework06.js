@@ -307,13 +307,28 @@ mostRepeated(["TechGlobal"]) 				                            -> "TechGlobal"
 console.log('\n============Task-13============');
 
 const mostRepeated = (arr) => {
+    const countMap = {};
 
+    let mostCount = 0;
+    let mostCounted;
+
+    for (const element of arr) { // 4
+        if(!countMap[element]) countMap[element] = 1;
+        else countMap[element] = countMap[element] + 1;
+        
+        if(countMap[element] > mostCount) {
+            mostCounted = element;
+            mostCount = countMap[element];
+        }
+    }
+
+    return mostCounted;
 }
 
 console.log(mostRepeated([4, 7, 4, 4, 4, 23, 23, 23]));
 console.log(mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"]));
 console.log(mostRepeated([10]));
-console.log(mostRepeated(["TechGlobal"]);)
+console.log(mostRepeated(["TechGlobal"]));
 
 
 /* OTHER METHODS
