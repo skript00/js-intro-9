@@ -95,7 +95,8 @@ const book3 = new Book('A Storm of Swords', 'Epic Fantasy', 694);
 
 const author = new Author('George R. R.', 'Martin', 'United States', [book1, book2, book3]);
 
-console.log('======USING FOR-EACH=====');
+//using loops because getBooks() is an array but we want it logged as an object
+console.log('======USING FOR-EACH====='); 
 console.log(author.getFullName());
 author.getBooks().forEach(element => {
     console.log(element)
