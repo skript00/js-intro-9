@@ -1,5 +1,7 @@
 const {CharacterHelper} = require('../utils/CharacterHelper.js');
 const {factorial} = require('../js-es6/03-arrow-functions.js');
+console.log(factorial(4))
+
 
 /* Task-1
 Write a function named hasUpperCase() which takes a string argument and return 
@@ -144,20 +146,8 @@ arrFactorial([]) 		        -> []
 */
 
 console.log('\n============Task-7============');
-
-const arrFactorial = (arr) => {
-    newArr = [];
-    arr.forEach((num) => {
-        let result = 1;
-
-        for(let i = 2; i <= num; i++) {
-            result *=i;
-        }
-        newArr.push(result);
-    });
-    return newArr;
-};
-
+// first & second solo attempts are at the bottom, this is post-receiving support condensing my code (:
+const arrFactorial = (arr) => arr.map(factorial);
 
 console.log(arrFactorial([1, 2, 3 ,4]));
 console.log(arrFactorial([0, 5]));
@@ -184,8 +174,39 @@ console.log(categorizeCharacters("12ab$%3c%"));
 
 
 /* TASK-6 W/OUT TERNARY
+
 const sumOfDigits = (str) => str.split('').reduce((sum, char) => {
     if (CharacterHelper.isDigit(char)) return sum + Number(char);
     return sum;
 }, 0); 
+
+*/
+
+/* TASK-7 RAW
+
+const arrFactorial = (arr) => {
+    let newArr = [];
+    arr.forEach((num) => {
+        let result = 1;
+
+        for(let i = 2; i <= num; i++) {
+            result *= i;
+        }
+        newArr.push(result);
+    });
+    return newArr;
+};
+
+*/
+
+/* TASK-7 W/ function import & forEach() method
+
+const arrFactorial = (arr) => {
+    let newArr = [];
+    arr.forEach((num) => {
+        newArr.push(factorial(num));
+    });
+    return newArr;
+};
+
 */
