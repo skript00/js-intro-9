@@ -9,17 +9,23 @@ const factorial = (n) => {
 console.log(factorial(3)); // 6
 console.log(factorial(4)); // 24
 
+console.log('==================');
+
 [3, 4, 5, 6].forEach((n) => {
     let result = 1;
 
     for(let i = 2; i <= n; i++) {
         result *= i;
-        console.log(result);
     }
+    console.log(result);
 });
+
+
 
 function sayHi() {
     return Hi;
 }
 
-const sayHi = () => 'Hi';
+// const sayHi = () => 'Hi';
+
+module.exports.factorial = factorial;
