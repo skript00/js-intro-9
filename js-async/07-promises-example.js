@@ -44,6 +44,3 @@ async function test2 () {
 }
 
 test2();
-
-// UPDATE FILES!!! and rewatch last two hours of sun mar 24th
-

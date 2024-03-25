@@ -12,7 +12,7 @@ function getMeat() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('GET THE MEAT');
-            if(true) resolve();
+            if(false) resolve();
             else reject('Could not get the meat, Costco was closed!');
         }, 1500);
     });
@@ -50,10 +50,26 @@ function eat() {
 
 // promises handling with then() and catch()
 function party1() {
-
+    goToCostco()
+    .then(() => getMeat())
+    .then(() => cook())
+    .then(() => serve())
+    .then(() => eat())
+    .catch(err => console.log(err));
 }
 
 // promises handling with async and await
-function party2() {
-    
+async function party2() {
+    try {
+        await goToCostco();
+        await getMeat();
+        await cook();
+        await serve();
+        await eat();
+    } catch(err) {
+        console.log(err);
+    }
 }
+
+party1();
+party2();

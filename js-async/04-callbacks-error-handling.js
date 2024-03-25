@@ -1,7 +1,7 @@
 function gotoAmazon(callback, err) {
     setTimeout(() => {
         let network = true;
-        if(network) {
+        if (network) {
             console.log('Welcome to amazon.com');
             callback();
         }
@@ -13,16 +13,17 @@ function gotoAmazon(callback, err) {
 
 function searchForProduct(productName, err) {
     setTimeout(() => {
-        if(productName.trim().length > 0) console.log(`Here is the result for ${productName}`);
+        if (productName.trim().length > 0) console.log(`Here is the result for ${productName}`);
         else err();
-
     }, 1000);
 }
 
 gotoAmazon(() => {
-    searchForProduct('Laptop', () => {
-        throw Error('Product name cannot be empty!');
+    searchForProduct('Laptop',
+        () => {
+            throw Error('Product name cannot be empty!');
+        });
+},
+    () => {
+        throw Error('ERROR occured while navigating to amazon.com');
     });
-}, () => {
-    throw Error('ERROR occured while navigating to amazon.com');
-});

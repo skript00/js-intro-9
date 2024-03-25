@@ -5,6 +5,7 @@ function method1(callback) {
       callback();
     }, 5000);
   }
+
   function method2(callback) {
     // navigate to profile
     setTimeout(() => {
@@ -12,17 +13,20 @@ function method1(callback) {
       callback();
     }, 1000);
   }
+
   function method3(callback) {
     setTimeout(() => {
       console.log("UPDATE PROFILE PICTURE");
       callback();
     }, 3000);
   }
+
   function method4() {
     setTimeout(() => {
       console.log("YOUR PROFILE IS SUCCESSFULLY UPDATED!");
     }, 2000);
   }
+  
   // Using callbacks to handle the asynchronous issue
   function program() {
     method1(() => {
@@ -33,4 +37,5 @@ function method1(callback) {
       });
     });
   }
+
   program();
