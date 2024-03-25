@@ -1,5 +1,5 @@
 const {CharacterHelper} = require('../utils/CharacterHelper.js');
-const {factorial} = require('../js-es6/03-arrow-functions.js');
+const {factorial} = require('../utils/MathHelper.js');
 
 /* Task-1
 Write a function named hasUpperCase() which takes a string argument and return 

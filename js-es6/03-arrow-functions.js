@@ -27,5 +27,3 @@ function sayHi() {
 }
 
 // const sayHi = () => 'Hi';
-
-module.exports.factorial = factorial;
