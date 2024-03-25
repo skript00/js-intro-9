@@ -1,7 +1,5 @@
 const {CharacterHelper} = require('../utils/CharacterHelper.js');
 const {factorial} = require('../js-es6/03-arrow-functions.js');
-console.log(factorial(4))
-
 
 /* Task-1
 Write a function named hasUpperCase() which takes a string argument and return 
@@ -146,7 +144,7 @@ arrFactorial([]) 		        -> []
 */
 
 console.log('\n============Task-7============');
-// first & second solo attempts are at the bottom, this is post-receiving support condensing my code (:
+// first & second solo attempts are at the bottom, this is after getting help condensing my code (:
 const arrFactorial = (arr) => arr.map(factorial);
 
 console.log(arrFactorial([1, 2, 3 ,4]));
@@ -165,7 +163,17 @@ categorizeCharacters("12ab$%3c%") 	-> [ 'abc', '123', '$%%' ]
 console.log('\n============Task-8===========');
 
 const categorizeCharacters = (str) => {
-    return 'null';// placeholder until i come back
+    let letters = [];
+    let nums = [];
+    let specials = [];
+    str = str.trim().split('');
+    str.map((element) => {
+        if (CharacterHelper.isLetter(element)) letters.push(element);
+        else if (CharacterHelper.isDigit(element)) nums.push(element);
+        else specials.push(element);
+    })
+    return [letters.join(''), nums.join(''), specials.join('')];
+
 }
 console.log(categorizeCharacters("1234"));
 console.log(categorizeCharacters("abc123$#%"));
