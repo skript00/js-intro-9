@@ -24,8 +24,8 @@ class Actions {
     static validateTitle(title) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                if (title.trim().length !== 0 || title !== null || title !== undefined) {
-                    console.log('Title validated successfully')
+                if (title !== "" && title !== null && title !== undefined) {
+                    console.log('Title validated successfully');
                     resolve('Title validated successfully');
                 }
                 else reject('Wrong title');
